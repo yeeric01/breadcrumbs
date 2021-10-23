@@ -3,15 +3,17 @@ import {useState} from "react";
 import logo from'../../assets/logo.png';
 import './Login.css'
 import {auth} from '../../firebase-config'
-import { signInWithEmailAndPassword } from '@firebase/auth';
+import { signInWithEmailAndPassword, onAuthStateChanged} from '@firebase/auth';
 import { useHistory } from 'react-router-dom';
 
 function Login() {
     const history = useHistory();
     const [loginEmail, setLoginEmail] = useState("");
     const [loginPassword, setLoginPassword] = useState("");
-
-
+    const [user, setUser] = useState({});
+    onAuthStateChanged(auth, (currentUser)=>{
+        setUser(currentUser);
+    })
     const loginUser = async ()=>{
         
         try{

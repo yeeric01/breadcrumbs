@@ -6,8 +6,8 @@ export class Home extends Component {
         return (
             <div className="homeContainer">
                 <div className="videoList">
-                    <Video></Video>
-                    <Video></Video>
+                    <Video videoPath="../../assets/video1.mp4"></Video>
+                    <Video videoPath="../../assets/sohard.mp4"></Video>
                     <Video></Video>
                     <Video></Video>
                     <Video></Video>

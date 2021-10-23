@@ -1,0 +1,19 @@
+.videoSideContainer{
+    position:absolute;
+    height:150px;
+    width:58px;
+    bottom:100px;
+    right:10px;
+    text-align: center;
+}
+.likeButton{
+    background-image:url("./like.png");
+    height:58px;
+    width:58px;
+    margin-bottom:20px;
+}
+.learnMore{
+    background-image:url("./learnMore.png");
+    height:58px;
+    width:58px;
+}

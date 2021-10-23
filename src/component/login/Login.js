@@ -4,8 +4,10 @@ import logo from'../../assets/logo.png';
 import './Login.css'
 import {auth} from '../../firebase-config'
 import { signInWithEmailAndPassword } from '@firebase/auth';
+import { useHistory } from 'react-router-dom';
 
 function Login() {
+    const history = useHistory();
     const [loginEmail, setLoginEmail] = useState("");
     const [loginPassword, setLoginPassword] = useState("");
 
@@ -19,7 +21,8 @@ function Login() {
                 loginPassword
             );
             console.log(user);
-            console.log("WE LOGGED IN");
+            history.push("/home");
+            
         }catch(error){
             console.log(error.message);
         }
